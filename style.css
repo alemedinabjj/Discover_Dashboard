@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height:100vh;
+  overflow: hidden;
+  background: #dce4e3;
+  display: flex;
+
+}
+
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+	--light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+section {
+  width: 4.875rem;
+  height: 100%;
+  background: var(--green);
+  position: relative;
+  transition: 300ms ease-in;
+}
+section.show {
+  width: 15.625rem;
+}
+.options {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+
+}
+
+.menu {
+  padding-top: 1.625rem;
+  padding-bottom: 1.625rem;
+  display: flex;
+  position: absolute;
+  padding-inline: 27px;
+  transition: 300ms ease-in;
+}
+.menu.show {
+  transform: translateX(0%);
+
+  right: -14px;
+  transition: 300ms ease-in;
+}
+.user_show {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -999;
+  height: 0px;
+  width: 0px;
+  gap: 9px;
+  padding-left: 35px;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  transform: translateX(-1000px);
+  transition: .3s ease;
+
+}
+
+.user_vet {
+  display: flex;
+  flex-direction: column;
+}
+.user_show img {
+  width: 45px;
+  height: 45px;
+}
+.user_show h3 {
+  font-size: 15px;
+}
+.user_show p {
+  font-size: 12px;
+}
+
+.user_show.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+  height: 60px;
+  transform: translateX(0px);
+}
+.search {
+  background: var(--light-green);
+  width: 3.125rem;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  transition: 300ms ease;
+  margin-left: 14px;
+  margin-bottom: 21px;
+  transition: .3s ease-in;
+}
+.search input {
+  border: none;
+  outline: none;
+  width: 0px;
+  font-size: 0.938rem;
+  font-weight: 400;
+  line-height: 22.5px;
+  background: var(--light-green);
+}
+.search input::placeholder {
+  color: var(--text-color);
+}
+
+.search input.show {
+  width: 100%;
+}
+.search,
+.grid,
+.user,
+.settings,
+.vet,
+.pet {
+  margin-left: 14px;
+  display: flex;
+  transition: .3s ease-in;
+  
+}
+.alinhar {
+  display: flex;
+  gap: 0.813rem;
+  margin: 0.813rem;
+}
+.atribute {
+  opacity: 0;
+  transition: .3s ease-in;
+}
+
+.atribute.show {
+  opacity: 1;
+}
+
+.search.show {
+  transition: 300ms ease-in;  
+  width: 13.875rem;
+
+}
+
+.close {
+  padding: 18px 27px 12px 14px;
+  background: #8ed7c6;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+
+.close.show {
+  justify-content: flex-end;
+}
+
+body h1 {
+  font-size: 1.563rem;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 18px;
+}
+
+svg {
+  cursor: pointer;
+}
+
+
+.logo_menu {
+  align-items: center;
+  padding-top: 1.625rem;
+  display: flex;
+  transition: 300ms ease-in;
+  padding-bottom: 1.625rem;
+}
+
+.logo_menu .vetLogo {
+  padding-left: 1.813rem;
+}
+
+.vetLogo {
+  opacity: 0;
+}
+.vetLogo.show {
+  opacity: 1;
+}
